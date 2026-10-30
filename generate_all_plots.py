@@ -76,7 +76,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot01_utilization_cdf.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 1: plot01_utilization_cdf.png")
+    print("[OK] Saved Plot 1: plot01_utilization_cdf.png")
 
     # -------------------------------------------------------------
     # Plot 2: End-to-End Latency vs. Traffic Load
@@ -101,7 +101,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot02_latency_vs_load.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 2: plot02_latency_vs_load.png")
+    print("[OK] Saved Plot 2: plot02_latency_vs_load.png")
 
     # -------------------------------------------------------------
     # Plot 3: Packet Loss Rate / SLA Violations
@@ -122,7 +122,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot03_packet_loss_bursts.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 3: plot03_packet_loss_bursts.png")
+    print("[OK] Saved Plot 3: plot03_packet_loss_bursts.png")
 
     # -------------------------------------------------------------
     # Plot 4: Route Churn / Reconfiguration Frequency
@@ -140,7 +140,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot04_route_churn.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 4: plot04_route_churn.png")
+    print("[OK] Saved Plot 4: plot04_route_churn.png")
 
     # -------------------------------------------------------------
     # Plot 5: Twin Fidelity vs. Dynamic Uncertainty Radius (Eq. 20)
@@ -161,7 +161,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot05_fidelity_coupling.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 5: plot05_fidelity_coupling.png")
+    print("[OK] Saved Plot 5: plot05_fidelity_coupling.png")
 
     # -------------------------------------------------------------
     # Plot 6: Out-of-Distribution Burst Robustness
@@ -192,7 +192,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot06_ood_burst_robustness.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 6: plot06_ood_burst_robustness.png")
+    print("[OK] Saved Plot 6: plot06_ood_burst_robustness.png")
 
     # -------------------------------------------------------------
     # Plot 7: Conformal Prediction Interval Coverage vs. Horizon
@@ -218,7 +218,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot07_conformal_coverage.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 7: plot07_conformal_coverage.png")
+    print("[OK] Saved Plot 7: plot07_conformal_coverage.png")
 
     # -------------------------------------------------------------
     # Plot 8: Pareto Trade-off Curve: Latency vs. Route Churn
@@ -245,7 +245,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot08_pareto_delay_churn.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 8: plot08_pareto_delay_churn.png")
+    print("[OK] Saved Plot 8: plot08_pareto_delay_churn.png")
 
     # -------------------------------------------------------------
     # Plot 9: Column-and-Constraint Generation (C&CG) Convergence
@@ -257,7 +257,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
 
     plt.plot(ccg_iters, upper_bounds, marker="o", color="#D81B60", label="Master Objective (Upper Bound)")
     plt.plot(ccg_iters, lower_bounds, marker="s", color="#1E88E5", label="Adversarial Subproblem (Lower Bound)")
-    plt.axvline(3, color="gray", linestyle=":", label="Convergence Threshold ($\\Delta \\le \\epsilon_{CG}$)")
+    plt.axvline(3, color="gray", linestyle=":", label="Convergence Threshold ($\\Delta \\leq \\epsilon_{CG}$)")
 
     plt.title("Plot 9: C&CG Master-Adversary Convergence Gap")
     plt.xlabel("C&CG Iteration Round $(r)$")
@@ -268,7 +268,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot09_ccg_convergence.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 9: plot09_ccg_convergence.png")
+    print("[OK] Saved Plot 9: plot09_ccg_convergence.png")
 
     # -------------------------------------------------------------
     # Plot 10: Solver Runtime / Computational Scalability
@@ -288,7 +288,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot10_runtime_scalability.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 10: plot10_runtime_scalability.png")
+    print("[OK] Saved Plot 10: plot10_runtime_scalability.png")
 
     # -------------------------------------------------------------
     # Plot 11: Optimality Gap vs. EXACT-MILP
@@ -315,7 +315,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot11_optimality_gap.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 11: plot11_optimality_gap.png")
+    print("[OK] Saved Plot 11: plot11_optimality_gap.png")
 
     # -------------------------------------------------------------
     # Plot 12: Comprehensive Ablation Study
@@ -346,7 +346,7 @@ def generate_all_12_plots(data_path="outputs/benchmark_results.json", out_dir="p
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, "plot12_ablation_study.png"), dpi=300)
     plt.close()
-    print("✓ Saved Plot 12: plot12_ablation_study.png")
+    print("[OK] Saved Plot 12: plot12_ablation_study.png")
 
     print("\n" + "=" * 60)
     print("ALL 12 PLOTS SUCCESSFULLY GENERATED AND SAVED TO: plots/")

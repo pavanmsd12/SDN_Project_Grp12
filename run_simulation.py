@@ -24,9 +24,14 @@ def main():
     print("   Group 12 Final Evaluation Pipeline (6 Algorithms, 12 Plots)")
     print("=" * 70)
 
-    # 1. Run Benchmark
+    # 1. Run Benchmark or load existing
     benchmark_file = os.path.join("outputs", "benchmark_results.json")
-    results = run_comprehensive_benchmark(total_epochs=20, output_path=benchmark_file)
+    if os.path.exists(benchmark_file) and "--rerun" not in sys.argv:
+        print(f"Loading existing benchmark results from: {benchmark_file} (use --rerun to re-execute)")
+        with open(benchmark_file, "r") as f:
+            results = json.load(f)
+    else:
+        results = run_comprehensive_benchmark(total_epochs=20, output_path=benchmark_file)
 
     # 2. Render all 12 Plots
     generate_all_12_plots(data_path=benchmark_file, out_dir="plots")
